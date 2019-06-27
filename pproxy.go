@@ -27,8 +27,8 @@ func generate() bool {
 			Routes: make([]pprox.Route, 1),
 		}
 		c.Routes[0] = pprox.Route{
-			Target: "bbc.com",
-			Prefix: "/bbc",
+			Target: "http://localhost:8080/static",
+			Prefix: "/static",
 		}
 		b, err := json.Marshal(c)
 		if err != nil {
